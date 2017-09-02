@@ -1,0 +1,331 @@
+/* 
+
+kenny if you look at this you're a nerd.
+who are we kidding, you're a nerd whether or not you look at this
+
+:P
+
+*/
+
+/* css reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+strong {font-weight: 600;}
+
+a.hover {cursor: pointer; text-decoration: none;}
+a.visited {text-decoration: none;}
+
+sup {font-size: 75%; margin-top: 5px;}
+
+*:focus {
+    outline: 0;
+}
+
+*:active {
+    outline: 0;
+}
+
+/* magical clearing magic */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+
+
+/* --------- my mind's telling me no ---------- */
+
+header {width: 100%; position: absolute; height: 30px; background-color: #202020; z-index: 999; padding: 5px; text-align: center; top: 0; left: 0;}
+
+header img {width: 80%; margin: 0px auto;height: auto;}
+
+/* --------- but my body -------- */
+
+
+body {
+    background-color: #0f1a33;
+    background-image: url(/images/BK-bg-3.png);
+    background-size: 100%;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    
+}
+
+.hot-body {
+    position: relative;
+    text-align: center;
+    width: 90%;
+    margin: -10px auto 0;
+    padding: 0px 40px;
+  /*  min-height: 100vh; */
+}
+
+.poster-background {overflow-x: hidden;}
+
+
+/* ------------ it's tellin' me yes ------- */
+
+
+h1, h2, h3, h4, h5, h6, p, a, ol, ul, li, input[type="text"], input[type="textarea"], input[type="submit"], span {
+    
+    font-family: 'Montserrat', 'Helvetica', sans-serif;
+    color: #eeeeee;
+    line-height: 1.618
+}
+
+
+h1, h2, h3, h4, h5, h6 {font-weight: 200; margin-bottom: 20px; letter-spacing: .2rem; line-height: 1;}
+
+h1 {font-size: 3.6rem}
+
+h2 {font-size: 2.4rem;}
+
+h3 {font-size: 2rem}
+
+h4 {font-size: 1.6rem}
+
+h5 {font-size: 1.2rem}
+
+h6 {font-size: 1rem}
+
+p, ul, ol, li, a {font-weight: 200; font-size: 1rem; letter-spacing: .1rem;}
+
+.tagline {text-transform: uppercase; letter-spacing: .5rem; padding: 20px 5px 0px; text-align: center;}
+
+hr.chunk {border: none; border-top: 3px solid #0F1A33; width: 15%; display: block; margin: 50px auto 30px;}
+
+/* -------- i don't see nothin wrong --------- */
+
+img.hero {width: 80%;/* max-width: 600px; */margin: 0px auto; padding-left: 5%;}
+
+a.movealong {text-transform: uppercase; letter-spacing: .35rem;}
+a.movealong:hover {cursor: pointer;}
+a.movealong img {max-width: 200px; margin-top: 10px;}
+
+div.info {text-align: center; padding: 20px 10px; margin-top: 10rem;}
+div.info p {text-transform: uppercase; font-size: 2rem; letter-spacing: 1rem;}
+
+.fondastuff {width: 100%; text-align: center;}
+.fondastuff img {width: 100%; max-width: 300px; margin-top: 60px;}
+.fondastuff p {text-transform: uppercase; margin-top: 20px; margin-bottom: 50px; letter-spacing: .5rem;}
+
+.dotted-line {font-size: 10rem; line-height: 1rem; color: rgba(247,237,47,.6); opacity: .6; letter-spacing: .5rem; text-align: center; margin-bottom: 20px;}
+
+.map {text-align: center; padding: 0px; width: 100%;}
+.map img {width: 106%; height: auto; margin: 0px auto; margin-left: -5%;}
+.map p {text-transform: uppercase; letter-spacing: .5rem; margin: 5px auto; width: 80%;}
+
+.form-zone {width: 100%; min-width: 100%; padding: 25vh 10px; text-align: center; margin: 75px auto; background-color: #e1e6e6; min-height: 50vh;
+box-shadow: inset 0px 25px 25px -25px #111, inset 0px -25px 25px -25px #111;
+        -o-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.wrapper {width: 80%; max-width: 900px; margin: 0 auto;}
+
+.form-zone h2 {text-transform: capitalize; font-size: 2rem; line-height: 1.2; color: #511413;}
+.form-zone p {color: #0F1A33; margin: 10px auto 30px; font-size: 1rem; letter-spacing: .1rem; text-align: justify; -webkit-hyphens: auto; hyphens: auto;}
+.form-zone img {margin: 35px auto 40px; width: 75%; max-width: 300px;}
+
+.form-zone .a-wrap {border: 1px solid #511413; padding: 10px 20px;
+    width: 80%;
+    max-width: 400px;
+    margin: 80px auto 0;
+    -o-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;}
+
+
+.form-zone .a-wrap:hover {background-color: #511413; color: rgba(247,237,47,.6); cursor: pointer;}
+
+
+.form-zone .a-wrap:hover a {color: rgba(247,237,47,.6); text-decoration: none;}
+
+.form-zone .a-wrap:hover a {cursor: pointer;}
+
+
+.form-zone a {color: #511413; text-transform: uppercase; letter-spacing: .4rem; 
+    -o-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+}
+
+.form-zone .a-wrap a:visited {text-decoration: none;}
+
+
+#formmodal div {    
+    text-align: center;
+    font-family: 'Montserrat', 'Helvetica', sans-serif;
+    color: #eeeeee;
+    line-height: 1.618}
+#formmodal label {display: none;}
+#formmodal button {width: 100%;}
+#formmodal .alert {color: #511413; padding: 5px;}
+#formmodal {background-color: #511413; padding: 30px 50px; width: 80%; height: 80%; text-align: center;}
+
+#formmodal form {width: 80%; margin: 60px auto;}
+#formmodal input[type="text"] {color: rgba(247,237,47,.6); background-color: #511413; border: none; /* border-bottom: 1px solid #FFCB4E;*/border-bottom: 1px solid #eeeeee; width: 100%; /*max-width: 600px;*/ font-size: 1rem; line-height: 4.854; text-align: center; text-transform: uppercase; letter-spacing: .6rem;}
+
+#formmodal input[type="submit"] {/*color: rgba(247,237,47,.6);*/ color: #eeeeee; background-color: #511413; padding: 10px 50px; margin-top: 80px;/* border: 1px solid rgba(247,237,47,.6);*/ border: 1px solid #eeeeee; font-size: 1rem; line-height: 3.236; text-align: center; text-transform: uppercase; letter-spacing: .4rem; -o-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
+
+#formmodal input[type="submit"]:hover {/*background-color: rgba(247,237,47,.6);*/ border-color: rgba(247,237,47,.6); /*color: #511413;*/ color: rgba(247,237,47,.6); cursor: pointer;}
+
+.fancybox-close-small::after {background-color:#511413; color: #eeeeee;}
+
+.fancybox-close-small:hover:after {
+    color: rgba(247,237,47,.6);
+    background: #511413;}
+
+
+
+.extras {width: 80%; margin: 20px auto; padding: 20px 5px; text-align: justify; -webkit-hyphens: auto; hyphens: auto;}
+.extras h3 {text-align: left;}
+
+
+/* --------- foot clan ----------- */
+
+
+#footer {width: 100%; position: relative; height: 30px; background-color: #202020; z-index: 999; padding: 5px; text-align: center; bottom: 0; left: 0;}
+
+#footer img {width: 80%; margin: 0px auto;height: auto;}
+
+
+/* ---------- with a little bump 'n' grind ----------- */
+
+
+
+@media screen and (min-width: 1100px) { 
+    
+    div.info {margin-top: 13rem;}
+
+}
+
+@media screen and (min-width: 936px) {
+    
+ /*   body {background-size: 110%; background-position: 45% -25%;} */
+   
+}
+
+
+@media screen and (min-width: 1200px) {
+      
+  /*  body {background-position: 45% -35%;} */
+    div.info {margin-top: 18rem;}
+
+}
+
+@media screen and (min-width: 1021px) and (max-width: 1099px) {
+    
+    div.info {margin-top: 13rem;}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1020px) {
+   
+    .tagline {width: 80%;margin: 0 auto;}
+    div.info {margin-top: 13rem;}
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    
+  
+    div.info p {font-size: 1.5rem;}
+    div.fondastuff img {margin-bottom: 10px}
+    div.fondastuff p {margin: 10px auto 60px; font-size: .9rem; width: 320px; line-height: 3.236; letter-spacing: .4rem;}
+    #formmodal {height: 90%; width: 90%; padding: 5px 5px;}
+}
+
+@media screen and (max-width: 550px) {
+    
+    .tagline {padding-top: 20px; font-size: .5rem; letter-spacing: .25rem;}
+    div.info {margin-top: 110px;}
+    div.info p {font-size: 1rem;}
+    .dotted-line {font-size: 7rem;}
+  
+    
+}
+
+
+@media screen and (max-width: 399px) {
+
+    
+    header {padding: 5px; width: 100%; height: 30px;}
+    header img {width: 200%; margin-left: -50%;}
+    body {background-size: 140%;}
+    .hot-body {padding-top: 0px;/* min-height: 67vh;*/}
+    img.hero {margin-top: 10px; width: 100%;}
+    .dotted-line {font-size: 4rem;}
+    div.info {margin-top: 10rem;}
+    div.info p {font-size: 1rem; letter-spacing: .5rem;}
+    .fondastuff img  { max-width: 200px;}
+    .form-zone {padding: 10vh 10px;}
+    .form-zone img {}
+    #footer {padding: 5px; width: 100%; height: 30px;}
+    #footer img {width: 200%; margin-left: -50%;}
+    }
+    
+
+    
+    
+    
+
+
+
+
+
+
