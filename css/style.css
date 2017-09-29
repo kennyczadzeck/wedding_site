@@ -236,6 +236,35 @@ box-shadow: inset 0px 25px 25px -25px #111, inset 0px -25px 25px -25px #111;
 .extras h3 {text-align: left;}
 
 
+/* ---------Hotel info ---------- */
+
+.hotel-list {
+    padding-bottom: 15px;
+}
+
+.hotel-list li p {
+    margin: 20 0 20 0;
+}
+
+.hotel-list li a p:hover {
+    color: rgba(247,237,47,.6); 
+    opacity: .6;
+}
+
+
+
+/* --------- Own Adventure ---------- */
+
+.own-adventure {
+    margin: 20px;
+}
+
+.adventure-link:hover {
+    color: rgba(247,237,47,.6); 
+    opacity: .6;
+}
+
+
 /* --------- foot clan ----------- */
 
 
