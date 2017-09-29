@@ -243,10 +243,11 @@ box-shadow: inset 0px 25px 25px -25px #111, inset 0px -25px 25px -25px #111;
 }
 
 .hotel-list li p {
+    font-size: 1.1em;
     margin: 20 0 20 0;
 }
 
-.hotel-list li a p:hover {
+.hotel-list li:hover {
     color: rgba(247,237,47,.6); 
     opacity: .6;
 }
