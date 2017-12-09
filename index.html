@@ -38,8 +38,109 @@
 
     <div class="info">
       <h1>March 31, 2018</h1>
-      <div class="form-zone"></div>
-      <div id="youtube"></div>
+
+      <!-- RSVP FORM -->
+      <div class="form-zone">
+        
+        <a class="fancybox" data-fancybox="formmodal" data-src="#formmodal" href="javascript:;"><div class="a-wrap"><h2 style="font-weight: 600;">RSVP Here!</h2></div></a>        
+        <div id="formmodal" style="display: none;"><!-- begin modal content -->
+          <div class="container-fluid">
+
+            <form id="rsvp-form">
+              <div class="form-group">
+                <label for="name">name</label>
+                <input type="text" name="name" class="form-control" placeholder="name"/>
+              </div>
+
+               <div class="form-group">
+                 <label for="number of guests">number of guests</label>
+                 <input type="text" name="number of guests" class="form-control" placeholder="number of guests"/>
+               </div>
+
+               <div class="form-group">
+                 <label for="guest name(s)">guest name(s)</label>
+                 <input type="text" name="guest name(s)" class="form-control" placeholder="guest name(s)"/>
+               </div>
+
+               <div class="form-group">
+                 <label>dietary restrictions</label>
+                 <input type="text" name="dietary restrictions" class="form-control" placeholder="dietary restrictions"/>
+               </div>
+
+               <div class="form-group">
+                 <label>phone</label>
+                 <input type="text" name="phone" class="form-control" placeholder="phone"/>
+               </div>
+
+               <div class="form-group">
+                 <label>email</label>
+                 <input type="text" name="email" class="form-control" placeholder="email"/>
+               </div>
+               
+               <div class="form-group">
+                 <label>accomodations</label>
+                 <input type="text" name="accomodations" class="form-control" placeholder="accomodations"/>
+               </div>
+
+               <div class="form-group">
+                 <button type="submit" id="submit-rsvp" class="btn btn-primary">Submit</button>
+               </div>
+             </form>
+             <div class="alert alert-success" id="submit-success" role="alert">Success!</div>
+             <div class="alert alert-danger" id="submit-failure" role="alert">Try again!</div>
+           </div>
+         </div>
+
+      </div>
+
+
+
+        <!-- YOUTUBE -->
+        <div id="youtube">
+          <style>
+            button, label { font-family: 'Montserrat', 'Helvetica', sans-serif; }
+          </style>
+          <div class="row youtube-component">
+            <h2 style="font-weight: 600; text-transform: uppercase; margin-bottom: 25px;">Request a Song!</h2>
+            <div class="col-md-6">
+
+              <!-- Search Form -->
+              <form id="video-search" class="form-inline">
+                <div class="form-group">
+                  <input style="min-width: 325px; color: #000;" type="text" class="form-control" name="query" placeholder="Search YouTube for Music..">
+                  <button type="submit" class="btn btn-default"><strong>Search</strong></button>
+                </div>
+              </form>
+              <!-- /Search Form -->
+
+              <!-- Search Results -->
+              <div id="search-results">
+                <div class="row" style="margin: 25px 0 10px 0;">
+                  <div class="col-lg-6">
+                    <button class="btn btn-success" id="choose-this-video" style="background-color: #3f7255"><strong>Add To Playlist</strong></button>
+                  </div>
+                  <div class="col-md-6">
+                    <button class="btn btn-danger" id="try-next-video" style="background-color: #96514e;"><strong>Next Result</strong></button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12" style="padding: 20px;">
+                    <div id="search-player"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <p><strong>Currently Requested: </strong></p>
+              <p id="featuring"></p>
+              <div id="playlist-player"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
     </div>
 
 

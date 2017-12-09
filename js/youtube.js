@@ -164,7 +164,6 @@ window.YouTube = (function() {
   }
 
   var init = function() {
-    renderTemplate();
     compileSummaryText();
     saveVideoButton();
     searchButton();
