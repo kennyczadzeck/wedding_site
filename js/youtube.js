@@ -68,6 +68,9 @@ window.YouTube = (function() {
   function saveVideoButton() {
     $('#choose-this-video').on('click', function() {
       var url = searchPlayer.getVideoUrl();
+      if (!url) {
+        alert('You need to search for a song before you can add one!');
+      }
       db.save({
         id: url.split('v=')[1],
         title: searchPlayer.getVideoData().title
