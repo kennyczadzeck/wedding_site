@@ -1,4 +1,4 @@
-var youTubeTemplate = (function () {/*
+var youTubeTemplate = (function () {`
   <style>
     button, label { font-family: 'Montserrat', 'Helvetica', sans-serif; }
   </style>
@@ -38,7 +38,7 @@ var youTubeTemplate = (function () {/*
       <div id="playlist-player"></div>
     </div>
   </div>
-*/}).toString().match(/[^]*\/\*([^]*)\*\/\}$/)[1];
+`});
 
 
 window.YouTube = (function() {

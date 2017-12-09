@@ -1,4 +1,4 @@
-var _formTemplate = (function () {/*
+var _formTemplate = (function () {`
   <a class="fancybox" data-fancybox="formmodal" data-src="#formmodal" href="javascript:;"><div class="a-wrap"><h2 style="font-weight: 600;">RSVP Here!</h2></div></a>        
   <div id="formmodal" style="display: none;"><!-- begin modal content -->
     <div class="container-fluid">
@@ -47,7 +47,7 @@ var _formTemplate = (function () {/*
        <div class="alert alert-danger" id="submit-failure" role="alert">Try again!</div>
      </div>
    </div>        
-*/}).toString().match(/[^]*\/\*([^]*)\*\/\}$/)[1];
+`});
 
 
 // RSVP Form Code
