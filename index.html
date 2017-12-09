@@ -13,6 +13,15 @@
   <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
   <script src="js/bootstrap.js" type="text/javascript" ></script>
+  <script src="js/rsvp.js"></script>
+  <script src="js/youtube.js"></script>
+  <script>
+    $(function() {
+      $('.fancybox').fancybox();
+      RSVP.init();
+      YouTube.init();
+    });
+  </script>
 </head>
 
 <body style="overflow-x: hidden;">
@@ -26,9 +35,13 @@
         <br /><br />
     </div><!-- end hot-body --> 
 
+
     <div class="info">
-      <p>March 31, 2018</p>
-    </div><!-- end info -->
+      <h1>March 31, 2018</h1>
+      <div class="form-zone"></div>
+      <div id="youtube"></div>
+    </div>
+
 
     <div class="fondastuff">
       <span class="dotted-line">..............</span>
@@ -40,7 +53,7 @@
         
         
         
-    <div class="form-zone">
+    
       <div class="wrapper">
         <h2>From the record store to the main stage<!--, from the Bay to L.A.--></h2>
         <img src="/images/fonda-light-marquee-r.png" />
@@ -49,17 +62,10 @@
           5 years ago amongst the stacks of vinyl at High Fidelity Records, Blaire &amp; Kenny were introduced by mutual friends, while Family of the Year played in the background. Since then they’ve moved up the California coast and back south again. They’ve collected a small zoo of rescue animals. And they’ve visited many more record stores and caught tons of shows along the way. On <strong style="color: #511413">March 31<sup>st</sup>, 2018</strong> they will mark the next big moment in their journey together with a wedding at one of Los Angeles’ most iconic music venues (appropriate, right?), The Fonda Theatre. Keep your calendars clear and your eyes open for formal invites coming soon. While you’re on the edge of your seats waiting for the invite, please make sure Blaire &amp; Kenny have your most up to date address, phone and email information.
         </p>
       </div>
-      <a class="fancybox" data-fancybox="formmodal" data-src="#formmodal" href="javascript:;"><div class="a-wrap">Please Share Your Contact Info</div></a>        
-      <div id="formmodal" style="display: none;"><!-- begin modal content -->
-        <div id="app">
-            <STDForm />
-        </div>
-      </div><!-- end a-wrap -->
       <a href="https://www.zola.com/registry/kennysfondablaire">
         <br /><br />
         <h4 style="color: black">Click here to find our wedding registry on Zola</h4>
       </a>
-    </div><!-- end form zone -->
         
         
     <div class="map">
@@ -76,11 +82,7 @@
       <ul class="hotel-list">
         <li>
           <a href="http://www.whollywoodhotel.com/">
-            <p>The Hollywood W Hotel</p>
-          </a>
-        <li>
-          <a href="https://www.starwoodmeeting.com/events/start.action?id=1709203614&key=3A84C49B">
-            <p style="font-size: .85em">***click here to check out our W room block!***</p>
+            <p>The Hollywood W Hotel*</p>
           </a>
         </li>
         <li>
@@ -103,6 +105,11 @@
             <p>Loews Hollywood Hotel</p>
           </a>
         </li>
+        <li>
+          <a href="https://www.starwoodmeeting.com/events/start.action?id=1709203614&key=3A84C49B">
+            <p>*Check out our room block at the W</p>
+          </a>
+        </li>
         <li></li>
       </ul>
     </div>
@@ -116,39 +123,21 @@
         
      
 
-<div class="extras">
-    <h3>But wait, there's more!</h3>
-  <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1zOZVrvTm5ZBOyiuU3C2EiE95IvE" width="100%" height="480"></iframe>     
-</div>
+  <div class="extras">
+      <h3>But wait, there's more!</h3>
+    <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1zOZVrvTm5ZBOyiuU3C2EiE95IvE" width="100%" height="480"></iframe>     
+  </div>
 
 
-    </div><!-- end background image div -->   
-   
-    <!--
-     <div id="footer">
-    <img src="/images/fonda-marquee.png" />
-    </div> -->
+  </div><!-- end background image div -->   
+ 
+  <!--
+   <div id="footer">
+  <img src="/images/fonda-marquee.png" />
+  </div> -->
     
     
-    <script>
-    
-        
 
-		$(document).ready(function() {
-
-			// You can use as usual :
-			$( '.fancybox' ).fancybox();
-
-
-			// or just create links having "data-fancybox" attribute
-
-		});
-
-	
-        
-    </script>
-    <script src="js/stdForm.js" type="text/javascript" ></script>
-    
+  <script src="https://www.youtube.com/iframe_api"></script>
 </body>
-    
 </html>

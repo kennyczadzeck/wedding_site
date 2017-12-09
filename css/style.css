@@ -149,7 +149,7 @@ a.movealong:hover {cursor: pointer;}
 a.movealong img {max-width: 200px; margin-top: 10px;}
 
 div.info {text-align: center; padding: 20px 10px; margin-top: 10rem;}
-div.info p {text-transform: uppercase; font-size: 2rem; letter-spacing: 1rem;}
+div.info p {text-transform: uppercase; font-size: 1rem; letter-spacing: .5rem;}
 
 .fondastuff {width: 100%; text-align: center;}
 .fondastuff img {width: 100%; max-width: 300px; margin-top: 60px;}
@@ -161,9 +161,16 @@ div.info p {text-transform: uppercase; font-size: 2rem; letter-spacing: 1rem;}
 .map img {width: 106%; height: auto; margin: 0px auto; margin-left: -5%;}
 .map p {text-transform: uppercase; letter-spacing: .5rem; margin: 5px auto; width: 80%;}
 
-.form-zone {width: 100%; min-width: 100%; padding: 25vh 10px; text-align: center; margin: 75px auto; background-color: #e1e6e6; min-height: 50vh;
-box-shadow: inset 0px 25px 25px -25px #111, inset 0px -25px 25px -25px #111;
-        -o-transition: all .3s ease-in-out;
+.form-zone {
+    /*width: 100%; */
+    /*min-width: 100%; */
+    /*padding: 25vh 10px; */
+    text-align: center; 
+    /*margin: 75px auto; */
+    /*background-color: #e1e6e6; */
+    min-height: 50vh;
+    /*box-shadow: inset 0px 25px 25px -25px #111, inset 0px -25px 25px -25px #111;*/
+    -o-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
@@ -176,16 +183,23 @@ box-shadow: inset 0px 25px 25px -25px #111, inset 0px -25px 25px -25px #111;
 .form-zone img {margin: 35px auto 40px; width: 75%; max-width: 300px;}
 
 .form-zone .a-wrap {border: 1px solid #511413; padding: 10px 20px;
-    width: 80%;
+    /*width: 80%;*/
+    background-color: #d0d2d3;
     max-width: 400px;
-    margin: 80px auto 0;
+    margin: 80px auto 0 auto;
     -o-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;}
 
+.a-wrap h2 {
+    margin-bottom: 0px;
+    padding: 10px 0 10px 0;
+    vertical-align: middle;
+}
 
-.form-zone .a-wrap:hover {background-color: #511413; color: rgba(247,237,47,.6); cursor: pointer;}
+
+.form-zone .a-wrap:hover {background-color: #a89144; color: rgba(247,237,47,.6); cursor: pointer;}
 
 
 .form-zone .a-wrap:hover a {color: rgba(247,237,47,.6); text-decoration: none;}
@@ -214,7 +228,7 @@ box-shadow: inset 0px 25px 25px -25px #111, inset 0px -25px 25px -25px #111;
 #formmodal .alert {color: #511413; padding: 5px;}
 #formmodal {background-color: #511413; padding: 30px 50px; width: 80%; height: 80%; text-align: center;}
 
-#formmodal form {width: 80%; margin: 60px auto;}
+#formmodal form {width: 90%; margin: 20px auto;}
 #formmodal input[type="text"] {color: rgba(247,237,47,.6); background-color: #511413; border: none; /* border-bottom: 1px solid #FFCB4E;*/border-bottom: 1px solid #eeeeee; width: 100%; /*max-width: 600px;*/ font-size: 1rem; line-height: 4.854; text-align: center; text-transform: uppercase; letter-spacing: .6rem;}
 
 #formmodal input[type="submit"] {/*color: rgba(247,237,47,.6);*/ color: #eeeeee; background-color: #511413; padding: 10px 50px; margin-top: 80px;/* border: 1px solid rgba(247,237,47,.6);*/ border: 1px solid #eeeeee; font-size: 1rem; line-height: 3.236; text-align: center; text-transform: uppercase; letter-spacing: .4rem; -o-transition: all .3s ease-in-out;
@@ -243,11 +257,10 @@ box-shadow: inset 0px 25px 25px -25px #111, inset 0px -25px 25px -25px #111;
 }
 
 .hotel-list li p {
-    font-size: 1.1em;
     margin: 20 0 20 0;
 }
 
-.hotel-list li:hover {
+.hotel-list li a p:hover {
     color: rgba(247,237,47,.6); 
     opacity: .6;
 }
@@ -348,14 +361,3 @@ box-shadow: inset 0px 25px 25px -25px #111, inset 0px -25px 25px -25px #111;
     #footer {padding: 5px; width: 100%; height: 30px;}
     #footer img {width: 200%; margin-left: -50%;}
     }
-    
-
-    
-    
-    
-
-
-
-
-
-
