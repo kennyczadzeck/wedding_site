@@ -70,17 +70,18 @@ window.YouTube = (function() {
       var url = searchPlayer.getVideoUrl();
       if (!url) {
         alert('You need to search for a song before you can add one!');
+      } else {
+        db.save({
+          id: url.split('v=')[1],
+          title: searchPlayer.getVideoData().title
+        }, 
+        function success(resp) {
+          refreshPlaylistPlayer();
+        }, 
+        function err(resp) {
+          console.error(resp);
+        });
       }
-      db.save({
-        id: url.split('v=')[1],
-        title: searchPlayer.getVideoData().title
-      }, 
-      function success(resp) {
-        refreshPlaylistPlayer();
-      }, 
-      function err(resp) {
-        console.error(resp);
-      });
     });
   };
 
