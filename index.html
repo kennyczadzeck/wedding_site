@@ -7,7 +7,8 @@
   <link rel=icon href=/BK-favicon.png>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" ></link>
   <link href="//fonts.googleapis.com/css?family=Montserrat:200,600" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />    
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />    
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/foundation-icons/3.0/foundation-icons.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css" ></link>
  
   <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -102,20 +103,21 @@
 
 
         <!-- YOUTUBE -->
-        <div id="youtube">
+        <div class="container" id="youtube" style="min-height: 100%">
           <style>
             button, label { font-family: 'Montserrat', 'Helvetica', sans-serif; }
+            /*.row, .col-md-6, .col-md-6 div { border: 1px solid pink; }*/
           </style>
           <div class="row youtube-component">
-            <h1 style="font-weight: 550; text-transform: uppercase; padding-bottom: 25px;">Request a Song</h1>
+            <h1 style="font-weight: 550; text-transform: uppercase; vertical-align: middle; padding-top: 25px;">Request a Song</h1>
             <br>
-            <div class="col-md-6">
+            <div class="col-md-6" style="min-height: 100%;">
 
               <!-- Search Form -->
               <form id="video-search" class="form-inline">
                 <div class="form-group">
-                  <input style="min-width: 325px; color: #000;" type="text" class="form-control" name="query" placeholder="Search YouTube for Music..">
-                  <button type="submit" class="btn btn-default"><strong>Search</strong></button>
+                  <input style="min-width: 325px; color: #000;" type="text" class="form-control search" name="query" placeholder="Search YouTube for Music...">
+                  <button type="submit" class="btn btn-default"><strong><i class="fi-die-three"></i> <i class="fi-die-five"></i> <i class="fi-die-two"></i> <i class="fi-die-six"></i> <i class="fi-die-one"></i> <i class="fi-die-four"></i></strong></button>
                 </div>
               </form>
               <!-- /Search Form -->
@@ -123,24 +125,28 @@
               <!-- Search Results -->
               <div id="search-results">
                 <div class="row" style="margin: 25px 0 10px 0;">
-                  <div class="col-lg-6">
-                    <button class="btn btn-success" id="choose-this-video" style="background-color: #3f7255"><strong>Add To Playlist</strong></button>
+                  <div class="col-lg-6" style="min-height: 100%;">
+                    <button class="btn btn-success" id="choose-this-video" style="background-color: #3f7255;"><strong>Yeah, that one!</strong></button>
                   </div>
-                  <div class="col-md-6">
-                    <button class="btn btn-danger" id="try-next-video" style="background-color: #96514e;"><strong>Next Result</strong></button>
+                  <div class="col-md-6" style="min-height: 100%">>
+                    <button class="btn btn-danger" id="try-next-video" style="background-color: #96514e;"><strong>Nah...try again</strong></button>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-12" style="padding: 20px;">
+                  <div style="padding: 20px;">
                     <div id="search-player" style="border: solid 2px #eee;"></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <p><strong>Currently Requested: </strong></p>
-              <p id="featuring"></p>
-              <div id="playlist-player" style="border: solid 2px #eee;"></div>
+            <div class="col-md-6" style="min-height: 100%">
+              <div>
+                <p><strong>Currently Requested: </strong></p>
+                <p id="featuring"></p>
+              </div>
+              <div style="padding: 20px;">
+                <div id="playlist-player" style="border: solid 2px #eee;"></div>
+              </div>
             </div>
           </div>
         </div>

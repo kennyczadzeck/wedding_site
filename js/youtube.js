@@ -151,8 +151,8 @@ window.YouTube = (function() {
   // Handler required by YouTube iFrame API
   window.onYouTubeIframeAPIReady = function() {
     searchPlayer = new YT.Player('search-player', {
-      width: '416', 
-      height: '291'
+      width: '500', 
+      height: '350'
     });
     playlistPlayer = new YT.Player('playlist-player', {
       width: '500',
