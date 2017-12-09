@@ -68,7 +68,7 @@ window.YouTube = (function() {
   function saveVideoButton() {
     $('#choose-this-video').on('click', function() {
       var url = searchPlayer.getVideoUrl();
-      if (!url) {
+      if (url === 'https://www.youtube.com/watch') {
         alert('You need to search for a song before you can add one!');
       } else {
         db.save({
@@ -94,12 +94,13 @@ window.YouTube = (function() {
     },
     save: function(data, success, err) {
       $.get(db.url, function(resp) {
+        console.log('save resp', resp);
         resp.videos.push(data);
         $.ajax({
           url: db.url,
           method: 'PUT',
           contentType: 'application/json',
-          data: JSON.stringify(resp)
+          data: JSON.stringify(resp.videos.filter(v => v.id))
         }).done(success).fail(err);
       });
     }
@@ -125,9 +126,11 @@ window.YouTube = (function() {
   // Lists some tracks from the playlist at random 
   function compileSummaryText() {
     var text = '';
-    db.query(function(data) {
-      shuffle(data.videos).slice(0,3).forEach(function(v, i) {
-        text += v.title.split('-')[1].trim().split('(')[0].trim()+', ';
+    db.query(function(videos) {
+      shuffle(videos).slice(0,3).forEach(function(v, i) {
+        var addText = v.title.includes('-') ? v.title.split('-')[1].trim() : v.title;
+        addText = addText.includes('(') ? addText.split('(')[0].trim() : addText;
+        text += addText+', ';
       });
       text += 'and more...';
       $('#featuring').html(text);
@@ -137,10 +140,10 @@ window.YouTube = (function() {
 
   // Refreshes the current playlist data
   function refreshPlaylistPlayer() {
-    db.query(function(resp) {
+    db.query(function(videos) {
       playlistPlayer.cuePlaylist({
         name: 'Blaire + Kenny Wedding',
-        playlist: shuffle(resp.videos.map(function(v) {return v.id;})).join(',')
+        playlist: shuffle(videos.map(function(v) {return v.id;})).join(',')
       });
 
     });
