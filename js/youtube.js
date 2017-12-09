@@ -94,13 +94,12 @@ window.YouTube = (function() {
     },
     save: function(data, success, err) {
       $.get(db.url, function(resp) {
-        console.log('save resp', resp);
-        resp.videos.push(data);
+        resp.push(data);
         $.ajax({
           url: db.url,
           method: 'PUT',
           contentType: 'application/json',
-          data: JSON.stringify(resp.videos.filter(v => v.id))
+          data: JSON.stringify(resp.filter(v => v.id))
         }).done(success).fail(err);
       });
     }

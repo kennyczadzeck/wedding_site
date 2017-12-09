@@ -151,11 +151,11 @@ a.movealong img {max-width: 200px; margin-top: 10px;}
 div.info {text-align: center; padding: 20px 10px; margin-top: 10rem;}
 div.info p {text-transform: uppercase; font-size: 1rem; letter-spacing: .5rem;}
 
-.fondastuff {width: 100%; text-align: center;}
-.fondastuff img {width: 100%; max-width: 300px; margin-top: 60px;}
-.fondastuff p {text-transform: uppercase; margin-top: 20px; margin-bottom: 50px; letter-spacing: .5rem;}
+.fondastuff {width: 100%; text-align: center; margin-bottom: 50px}
+.fondastuff img {width: 100%; max-width: 300px; margin-top: 10px;}
+.fondastuff p {text-transform: uppercase; margin-top: 20px; margin-bottom: 20px; letter-spacing: .5rem;}
 
-.dotted-line {font-size: 10rem; line-height: 1rem; color: rgba(247,237,47,.6); opacity: .6; letter-spacing: .5rem; text-align: center; margin-bottom: 20px;}
+.dotted-line {font-size: 10rem; line-height: 1rem; color: rgba(247,237,47,.6); opacity: .6; letter-spacing: .5rem; text-align: center; padding-bottom: 20px;}
 
 .map {text-align: center; padding: 0px; width: 100%;}
 .map img {width: 106%; height: auto; margin: 0px auto; margin-left: -5%;}
@@ -168,7 +168,7 @@ div.info p {text-transform: uppercase; font-size: 1rem; letter-spacing: .5rem;}
     text-align: center; 
     /*margin: 75px auto; */
     /*background-color: #e1e6e6; */
-    min-height: 50vh;
+    min-height: 30vh;
     /*box-shadow: inset 0px 25px 25px -25px #111, inset 0px -25px 25px -25px #111;*/
     -o-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -186,7 +186,8 @@ div.info p {text-transform: uppercase; font-size: 1rem; letter-spacing: .5rem;}
     /*width: 80%;*/
     background-color: #d0d2d3;
     max-width: 400px;
-    margin: 80px auto 0 auto;
+    margin: 40px auto 0 auto;
+    padding: 20px;
     -o-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
@@ -329,7 +330,7 @@ div.info p {text-transform: uppercase; font-size: 1rem; letter-spacing: .5rem;}
   
     div.info p {font-size: 1.5rem;}
     div.fondastuff img {margin-bottom: 10px}
-    div.fondastuff p {margin: 10px auto 60px; font-size: .9rem; width: 320px; line-height: 3.236; letter-spacing: .4rem;}
+    div.fondastuff p {margin: 10px auto 30px; font-size: .9rem; width: 320px; line-height: 3.236; letter-spacing: .4rem;}
     #formmodal {height: 90%; width: 90%; padding: 5px 5px;}
 }
 
