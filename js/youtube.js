@@ -122,9 +122,7 @@ window.YouTube = (function() {
   function compileSummaryText() {
     var text = '';
     db.query(function(data) {
-      console.log(shuffle(data.videos).slice())
       shuffle(data.videos).slice(0,3).forEach(function(v, i) {
-        console.log(v)
         text += v.title.split('-')[1].trim().split('(')[0].trim()+', ';
       });
       text += 'and more...';
@@ -138,7 +136,7 @@ window.YouTube = (function() {
     db.query(function(resp) {
       playlistPlayer.cuePlaylist({
         name: 'Blaire + Kenny Wedding',
-        playlist: resp.videos.map(function(v) {return v.id;}).join(',')
+        playlist: shuffle(resp.videos.map(function(v) {return v.id;})).join(',')
       });
 
     });
