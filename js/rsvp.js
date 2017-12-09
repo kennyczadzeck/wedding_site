@@ -51,7 +51,7 @@ var _formTemplate = (function () {`
 
 
 // RSVP Form Code
-window.RSVP = (function() {
+var RSVP = (function() {
 
   var url = 'https://script.google.com/macros/s/AKfycbzGAaRHkQqHYcROROpbUOFn7enu8h5210gXzYC-do9cPMSaT1XM/exec';
 
