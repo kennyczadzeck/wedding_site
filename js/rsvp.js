@@ -1,4 +1,4 @@
-var formTemplate = (function () {/*
+var _formTemplate = (function () {/*
   <a class="fancybox" data-fancybox="formmodal" data-src="#formmodal" href="javascript:;"><div class="a-wrap"><h2 style="font-weight: 600;">RSVP Here!</h2></div></a>        
   <div id="formmodal" style="display: none;"><!-- begin modal content -->
     <div class="container-fluid">
@@ -51,8 +51,7 @@ var formTemplate = (function () {/*
 
 
 // RSVP Form Code
-var RSVP = (function() {
-  console.log(alert)
+window.RSVP = (function() {
 
   var url = 'https://script.google.com/macros/s/AKfycbzGAaRHkQqHYcROROpbUOFn7enu8h5210gXzYC-do9cPMSaT1XM/exec';
 
@@ -90,7 +89,7 @@ var RSVP = (function() {
 
   var renderForm = function() {
     // Renders the HTML template defined at top of file
-    $('.form-zone').append(formTemplate);
+    $('.form-zone').append(_formTemplate);
   }
 
   var init = function(){
