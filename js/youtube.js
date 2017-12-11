@@ -69,7 +69,7 @@ window.YouTube = (function() {
     $('#choose-this-video').on('click', function() {
       var url = searchPlayer.getVideoUrl();
       if (url === 'https://www.youtube.com/watch') {
-        alert('You need to search for a song before you can add one!');
+        alert('You must search for a song before you can request one!');
       } else {
         db.save({
           id: url.split('v=')[1],
