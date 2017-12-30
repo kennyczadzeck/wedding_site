@@ -229,7 +229,26 @@ div.info p {text-transform: uppercase; font-size: 1rem; letter-spacing: .5rem;}
 #formmodal {background-color: #511413; padding: 30px 50px; width: 80%; height: 80%; text-align: center;}
 
 #formmodal form {width: 90%; margin: 20px auto;}
-#formmodal input[type="text"] {color: rgba(247,237,47,.6); background-color: #511413; border: none; /* border-bottom: 1px solid #FFCB4E;*/border-bottom: 1px solid #eeeeee; width: 100%; /*max-width: 600px;*/ font-size: 1rem; line-height: 4.854; text-align: center; text-transform: uppercase; letter-spacing: .6rem;}
+#formmodal input[type="text"] {
+    color: rgba(247,237,47,.6); 
+    background-color: #511413; 
+    border: none; 
+    /* border-bottom: 1px solid #FFCB4E;*/
+    border-bottom: 1px solid #eeeeee; 
+    width: 100%; 
+    /*max-width: 600px;*/ 
+    font-size: 1rem; 
+    line-height: 4.854; 
+    text-align: center; 
+    text-transform: uppercase; 
+    letter-spacing: .6rem;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    -webkit-text-fill-color: rgba(247,237,47,.6);
+    -webkit-opacity: 1;
+}
 
 #formmodal input[type="submit"] {/*color: rgba(247,237,47,.6);*/ color: #eeeeee; background-color: #511413; padding: 10px 50px; margin-top: 80px;/* border: 1px solid rgba(247,237,47,.6);*/ border: 1px solid #eeeeee; font-size: 1rem; line-height: 3.236; text-align: center; text-transform: uppercase; letter-spacing: .4rem; -o-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;

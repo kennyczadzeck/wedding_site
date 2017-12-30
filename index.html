@@ -17,6 +17,9 @@
   <script src="js/rsvp.js"></script>
   <script src="js/youtube.js"></script>
   <script>
+    if (navigator.vendor.includes('Apple')) {
+      alert('You are using an unsupported browser. Use Chrome or Firefox instead.');
+    }
     $(function() {
       $('.fancybox').fancybox();
       RSVP.init();
