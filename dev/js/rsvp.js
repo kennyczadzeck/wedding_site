@@ -69,6 +69,9 @@ var RSVP = (function() {
     // Sets form-submission listener and handler 
     $('#submit-rsvp').on('click', function(e) {
       e.preventDefault();
+      var submitButton = $('#submit-rsvp');
+      submitButton.attr('disabled', 'disabled');
+      submitButton.html('Please wait...');
       $.ajax({
         url: url,
         method: 'GET',
@@ -76,14 +79,16 @@ var RSVP = (function() {
         data: $form.serialize()
       })
       .done(function(resp) {
-        toggle(alert.$success, 2000, function() {
+        toggle(alert.$success, 1250, function() {
           $.fancybox.close();
           $form.find('input[type=text]').val('');
+          submitButton.removeAttr('disabled');
+          submitButton.html('Submit');
         });
       })
       .fail(function(err) {
         console.log(err);
-        toggle(alert.$error, 2000);
+        toggle(alert.$error, 1250);
       });
     });
   };
