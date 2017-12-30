@@ -52,7 +52,6 @@ var formTemplate = (function () {/*
 
 // RSVP Form Code
 var RSVP = (function() {
-  console.log(alert)
 
   var url = 'https://script.google.com/macros/s/AKfycbzGAaRHkQqHYcROROpbUOFn7enu8h5210gXzYC-do9cPMSaT1XM/exec';
 
@@ -100,7 +99,6 @@ var RSVP = (function() {
 
   var init = function(){
     // Render HTML and register event listeners
-    renderForm();
     var $form = $('form#rsvp-form');
     var alert = {
       $success: $('#submit-success').hide(), 
