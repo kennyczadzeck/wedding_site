@@ -150,13 +150,16 @@ window.YouTube = (function() {
 
   // Handler required by YouTube iFrame API
   window.onYouTubeIframeAPIReady = function() {
+    var isMobile = window.innerWidth <= 500 ? true : false;
+    var mobileWidth = Math.ceil(window.innerWidth * 0.9);
+    var mobileHeight = Math.ceil(mobileWidth * 0.7);
     searchPlayer = new YT.Player('search-player', {
-      width: '500', 
-      height: '350'
+      width: isMobile ? mobileWidth.toString() : '500', 
+      height: isMobile ? mobileHeight.toString() : '350'
     });
     playlistPlayer = new YT.Player('playlist-player', {
-      width: '500',
-      height: '350',
+      width: isMobile ? mobileWidth.toString() : '500', 
+      height: isMobile ? mobileHeight.toString() : '350',
       events: {
         onReady: refreshPlaylistPlayer
       }
