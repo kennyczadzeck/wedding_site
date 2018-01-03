@@ -88,7 +88,7 @@ window.YouTube = (function() {
 
   // Database (MyJSON) interface
   var db = {
-    url: 'https://api.myjson.com/bins/b62z7',
+    url: 'https://jsonstorage.net/api/items/16f73ceb-ef16-4bc3-8188-bd0849a4686b',
     query: function(cb) {
       $.get(db.url, cb);
     },
@@ -142,9 +142,8 @@ window.YouTube = (function() {
     db.query(function(videos) {
       playlistPlayer.cuePlaylist({
         name: 'Blaire + Kenny Wedding',
-        playlist: shuffle(videos.map(function(v) {return v.id;})).join(',')
+        playlist: shuffle(videos.map(function(v) {return v.id;}))
       });
-
     });
   };
 
