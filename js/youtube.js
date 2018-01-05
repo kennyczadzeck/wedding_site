@@ -85,6 +85,20 @@ window.YouTube = (function() {
     });
   };
 
+  var uniqueVideos = function(array) {
+    var uniques = {};
+    array.forEach(function(videoObj) {
+      if (!uniques[videoObj.id]) {
+        uniques[videoObj.id] = videoObj
+      }
+    });
+    var filteredVids = [];
+    for (key in uniques) {
+      filteredVids.push(uniques[key]);
+    }
+    return filteredVids;
+  };
+
 
   // Database (MyJSON) interface
   var db = {
@@ -99,7 +113,7 @@ window.YouTube = (function() {
           url: db.url,
           method: 'PUT',
           contentType: 'application/json',
-          data: JSON.stringify(resp.filter(v => v.id))
+          data: JSON.stringify(uniqueVideos(resp.filter(v => v.id)))
         }).done(success).fail(err);
       });
     }
