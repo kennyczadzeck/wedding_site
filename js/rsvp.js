@@ -60,7 +60,7 @@ var RSVP = (function() {
     elem.show('fast');
     setTimeout(function() {
       elem.hide('fast');
-      cb();
+      cb ? cb() : null;
     }, time);
   };
 
