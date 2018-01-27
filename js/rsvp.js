@@ -64,31 +64,69 @@ var RSVP = (function() {
     }, time);
   };
 
+  var validateInputs = function($form) {
+    var inputs = [
+      'name', 
+      '"number of guests"', 
+      '"guest name(s)"',
+      'phone', 
+      'email' 
+    ];
+    function inputValue(name) {
+      return $form.find('input[name='+name+']').val();
+    };
+    for (var i = 0; i < inputs.length; i++) {
+      var value = inputValue(inputs[i]);
+      if (i === 1 && value !== '' && isNaN(parseInt(value))) {
+        return 'Number of guests must be a number';
+      }
+      else if (i === 1 && parseInt(value) < 1) {
+        return 'Number of guests must be at least one';
+      }
+      else if (i === 2 && parseInt(inputValue(inputs[1])) > 1) {
+        return 'Please provide the names of your guest(s)';
+      }
+      else if (!value && i !== 2) {
+        return 'Please provide your '+inputs[i].replace(/\"/g, '');
+      } else {
+        continue
+      }
+    }
+  };
+
   var submitRsvp = function($form, alert) {
     // Sets form-submission listener and handler 
     $('#submit-rsvp').on('click', function(e) {
       e.preventDefault();
-      var submitButton = $('#submit-rsvp');
-      submitButton.attr('disabled', 'disabled');
-      submitButton.html('Please wait...');
-      $.ajax({
-        url: url,
-        method: 'GET',
-        dataType: 'json',
-        data: $form.serialize()
-      })
-      .done(function(resp) {
-        toggle(alert.$success, 1250, function() {
-          $.fancybox.close();
-          $form.find('input[type=text]').val('');
-          submitButton.removeAttr('disabled');
-          submitButton.html('Submit');
+      var missingData = validateInputs($form);
+      if (missingData) {
+        alert.$warning.html(missingData);
+        toggle(alert.$warning, 1500, function() {
+          alert.$warning.html('');
         });
-      })
-      .fail(function(err) {
-        console.log(err);
-        toggle(alert.$error, 1250);
-      });
+      } else {
+        var submitButton = $('#submit-rsvp');
+        submitButton.attr('disabled', 'disabled');
+        submitButton.html('Please wait...');
+        $.ajax({
+          url: url,
+          method: 'GET',
+          dataType: 'json',
+          data: $form.serialize()
+        })
+        .done(function(resp) {
+          toggle(alert.$success, 1250, function() {
+            $.fancybox.close();
+            $form.find('input[type=text]').val('');
+            submitButton.removeAttr('disabled');
+            submitButton.html('Submit');
+          });
+        })
+        .fail(function(err) {
+          console.log(err);
+          toggle(alert.$error, 1250);
+        });
+      }
     });
   };
 
@@ -102,6 +140,7 @@ var RSVP = (function() {
     var $form = $('form#rsvp-form');
     var alert = {
       $success: $('#submit-success').hide(), 
+      $warning: $('#submit-warning').hide(),
       $failure: $('#submit-failure').hide()
     };
     submitRsvp($form, alert);
