@@ -81,10 +81,13 @@ var RSVP = (function() {
         return 'Number of guests must be a number';
       }
       else if (i === 1 && parseInt(value) < 1) {
-        return 'Number of guests must be at least one';
+        return 'Total number of guests must be at least one (yourself)';
       }
-      else if (i === 2 && parseInt(inputValue(inputs[1])) > 1) {
+      else if (i === 2 && parseInt(inputValue(inputs[1])) > 1 && !inputValue(inputs[2])) {
         return 'Please provide the names of your guest(s)';
+      }
+      else if (i === 2 && parseInt(inputValue(inputs[1])) === 1 && inputValue(inputs[2])) {
+        return 'Do not include additional guest names when RSVPing as a single guest';
       }
       else if (!value && i !== 2) {
         return 'Please provide your '+inputs[i].replace(/\"/g, '');
@@ -101,7 +104,7 @@ var RSVP = (function() {
       var missingData = validateInputs($form);
       if (missingData) {
         alert.$warning.html(missingData);
-        toggle(alert.$warning, 1500, function() {
+        toggle(alert.$warning, 2500, function() {
           alert.$warning.html('');
         });
       } else {
