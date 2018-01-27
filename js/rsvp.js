@@ -78,16 +78,16 @@ var RSVP = (function() {
     for (var i = 0; i < inputs.length; i++) {
       var value = inputValue(inputs[i]);
       if (i === 1 && value !== '' && isNaN(parseInt(value))) {
-        return 'Number of guests must be a number';
+        return 'Head count must be a number';
       }
       else if (i === 1 && parseInt(value) < 1) {
-        return 'Total number of guests must be at least one (yourself)';
+        return 'Head count must be at least one (yourself)';
       }
       else if (i === 2 && parseInt(inputValue(inputs[1])) > 1 && !inputValue(inputs[2])) {
-        return 'Please provide the names of your guest(s)';
+        return 'Please provide the other names of your party';
       }
       else if (i === 2 && parseInt(inputValue(inputs[1])) === 1 && inputValue(inputs[2])) {
-        return 'Do not include additional guest names when RSVPing as a single guest';
+        return 'Do not include additional names when RSVPing as a single guest';
       }
       else if (!value && i !== 2) {
         return 'Please provide your '+inputs[i].replace(/\"/g, '');
