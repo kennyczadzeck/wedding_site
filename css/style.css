@@ -55,6 +55,10 @@ table {
 
 strong {font-weight: 600;}
 
+a {
+    -webkit-transition: .15s all ease-in-out;
+    -moz-transition: .15s all ease-in-out;
+    transition: .15s all ease-in-out;}
 a.hover {cursor: pointer; text-decoration: none;}
 a.visited {text-decoration: none;}
 
@@ -185,9 +189,9 @@ div.info p {text-transform: uppercase; font-size: 1rem; letter-spacing: .5rem;}
 .form-zone p {color: #0F1A33; margin: 10px auto 30px; font-size: 1rem; letter-spacing: .1rem; text-align: justify; -webkit-hyphens: auto; hyphens: auto;}
 .form-zone img {margin: 35px auto 40px; width: 75%; max-width: 300px;}
 
-.form-zone .a-wrap {border: 1px solid #511413; padding: 10px 20px;
+.form-zone .a-wrap {border: 1px solid rgba(247,237,47,.6); padding: 10px 20px;
     /*width: 80%;*/
-    background-color: #d0d2d3;
+    background-color: #0f1a33;
     max-width: 400px;
     margin: 40px auto 0 auto;
     padding: 20px;
@@ -200,7 +204,12 @@ div.info p {text-transform: uppercase; font-size: 1rem; letter-spacing: .5rem;}
     margin-bottom: 0px;
     padding: 10px 0 10px 0;
     vertical-align: middle;
+    color: #eeeeee;
 }
+
+.a-wrap p {color: #eeeeee; text-align: center; margin: 10px auto 0;}
+
+.a-wrap h3 {font-weight: 600; margin-top: 5px;}
 
 input.search::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #000;
@@ -220,12 +229,11 @@ input.search:-moz-placeholder { /* Firefox 18- */
 .form-zone .a-wrap:hover {background-color: #a89144; color: rgba(247,237,47,.6); cursor: pointer;}
 
 
-.form-zone .a-wrap:hover a {color: rgba(247,237,47,.6); text-decoration: none;}
-
-.form-zone .a-wrap:hover a {cursor: pointer;}
+.form-zone .a-wrap:hover a  {color: #511413; text-decoration: none;cursor: pointer;}
 
 
-.form-zone a {color: #511413; text-transform: uppercase; letter-spacing: .4rem; 
+
+.form-zone a {color: #eeeeee; text-transform: uppercase; letter-spacing: .4rem; 
     -o-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
@@ -242,7 +250,9 @@ input.search:-moz-placeholder { /* Firefox 18- */
     color: #eeeeee;
     line-height: 1.618}
 #formmodal label {display: none;}
-#formmodal button {width: 100%;}
+#formmodal button {width: 100%; }
+#formmodal button#submit-rsvp {width: 100%; max-width: 400px; margin: 0 auto;background-color: rgba(0,0,0,0); -webkit-border-radius: 0px; border-radius: 0px; text-transform: uppercase;border: 1px solid #eee; letter-spacing: .6rem; -webkit-transition: .3s all ease-in-out; -moz-transition: .3s all ease-in-out; transition: .3s all ease-in-out}
+#formmodal button#submit-rsvp:hover {background-color:rgba(247,237,47,.6); border-color: rgba(247,237,47,.6) }
 #formmodal .alert {color: #511413; padding: 5px;}
 #formmodal {background-color: #511413; padding: 30px 50px; width: 80%; height: 80%; text-align: center;}
 
@@ -291,10 +301,32 @@ input.search:-moz-placeholder { /* Firefox 18- */
     margin: 20px;
 }
 
+.adventure-link {border-bottom: 1px solid #eee; padding-bottom: 2px;  }
+
 .adventure-link:hover {
     color: rgba(247,237,47,.6); 
-    opacity: .6;
+    border-bottom: 1px solid rgba(247,237,47,.6);
+    opacity: 1;
 }
+
+
+/* how BK met */
+
+
+.lightwrap {width: 100%; background-color: #eeeeee; padding: 40px; 
+    -webkit-box-shadow: 
+        inset 0px 11px 8px -10px #000,
+        inset 0px -11px 8px -10px #000;
+    -moz-box-shadow: 
+        inset 0px 11px 8px -10px #000,
+        inset 0px -11px 8px -10px #000; 
+    box-shadow: 
+        inset 0px 11px 8px -10px #000,
+        inset 0px -11px 8px -10px #000; 
+}
+.lightwrap h2, .lightwrap p {color: #511413; text-align: center; }
+.lightwrap p {margin-top: 20px;}
+
 
 
 /* --------- foot clan ----------- */
@@ -305,13 +337,69 @@ input.search:-moz-placeholder { /* Firefox 18- */
 #footer img {width: 80%; margin: 0px auto;height: auto;}
 
 
+
+/* make responsive videos */
+
+
+/* Youtube embed code for responsive width across devices */
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* and style the youtube search form */
+
+input::-webkit-input-placeholder {
+color: #eee !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+color: #eee !important;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+color: #eee !important;  
+}
+ 
+input:-ms-input-placeholder {  
+    color: #eee !important;}  
+
+
+
+.form-group input[type="text"] {background-color: rgba(0,0,0,0); border:none; border-bottom: 1px solid rgba(247,237,47,.6); border-radius: 0px; -webkit-border-radius:0px;color: #eeeeee; }
+
+.btn {margin-bottom: 10px;}
+
+.form-group button.btn.btn-default {color: #eee;
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(247,237,47,.6);
+    border-radius: 0px;
+    margin-bottom: 0px;
+    -webkit-transition: .3s all ease-in-out;
+    -moz-transition: .3s all ease-in-out;
+    transition: .3s all ease-in-out;
+}
+
+.form-group button.btn.btn-default:hover {background-color:rgba(247,237,47,.6) }
+
+
 /* ---------- with a little bump 'n' grind ----------- */
 
 
 
 @media screen and (min-width: 1100px) { 
     
-    div.info {margin-top: 13rem;}
+    div.info {margin-top: 16rem;}
 
 }
 
@@ -331,7 +419,7 @@ input.search:-moz-placeholder { /* Firefox 18- */
 
 @media screen and (min-width: 1021px) and (max-width: 1099px) {
     
-    div.info {margin-top: 13rem;}
+    div.info {margin-top: 16rem;}
 }
 
 @media screen and (min-width: 769px) and (max-width: 1020px) {
@@ -358,6 +446,7 @@ input.search:-moz-placeholder { /* Firefox 18- */
     div.info p {font-size: 1rem;}
     .dotted-line {font-size: 7rem;}
   
+    .form-group button.btn.btn-default {margin-top: 20px;}
     
 }
 
@@ -368,13 +457,14 @@ input.search:-moz-placeholder { /* Firefox 18- */
     header {padding: 5px; width: 100%; height: 30px;}
     header img {width: 200%; margin-left: -50%;}
     body {background-size: 140%;}
+    h1 {font-size: 2rem;}
     .hot-body {padding-top: 0px;/* min-height: 67vh;*/}
     img.hero {margin-top: 10px; width: 100%;}
     .dotted-line {font-size: 4rem;}
     div.info {margin-top: 10rem;}
-    div.info p {font-size: 1rem; letter-spacing: .5rem;}
+    div.info p {font-size: .7rem; letter-spacing: .4rem;}
     .fondastuff img  { max-width: 200px;}
-    .form-zone {padding: 10vh 10px;}
+    .form-zone {padding: 2vh 10px;}
     .form-zone img {}
     #footer {padding: 5px; width: 100%; height: 30px;}
     #footer img {width: 200%; margin-left: -50%;}
