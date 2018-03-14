@@ -102,20 +102,24 @@ window.YouTube = (function() {
 
   // Database (MyJSON) interface
   var db = {
-    url: 'https://jsonstorage.net/api/items/16f73ceb-ef16-4bc3-8188-bd0849a4686b',
+    // url: 'https://jsonstorage.net/api/items/16f73ceb-ef16-4bc3-8188-bd0849a4686b',
+    url: 'https://api.myjson.com/bins/lplbx',
     query: function(cb) {
-      $.get(db.url, cb);
+      // $.get(db.url, cb);
+      $.ajax({
+        url: db.url
+      }).done(cb)
     },
     save: function(data, success, err) {
-      $.get(db.url, function(resp) {
-        resp.push(data);
+      db.query(function(videos) {
+        videos.push(data)
         $.ajax({
           url: db.url,
           method: 'PUT',
           contentType: 'application/json',
-          data: JSON.stringify(uniqueVideos(resp.filter(v => v.id)))
+          data: JSON.stringify(uniqueVideos(videos.filter(v => v.id)))
         }).done(success).fail(err);
-      });
+      })
     }
   };
 
